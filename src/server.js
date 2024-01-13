@@ -1,5 +1,8 @@
-const port = process.env.PORT || 3001;
 const app = require("./app");
+const port = process.env.PORT || 3001;
+const connectToDatabase = require("./database/connection");
 
-app.listen(port);
-console.log(`API running on PORT ${port}`);
+app.listen(port, async () => {
+  await connectToDatabase();
+  console.log(`API running on PORT ${port}`);
+});
