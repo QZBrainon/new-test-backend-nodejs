@@ -1,4 +1,4 @@
-class CustomErrorGenerator extends Error {
+class HttpErrorGenerator extends Error {
   constructor(statusCode, message) {
     super(message);
     this.statusCode = statusCode;
@@ -6,5 +6,5 @@ class CustomErrorGenerator extends Error {
 }
 
 module.exports = {
-  CustomErrorGenerator,
+  HttpErrorGenerator,
 };
