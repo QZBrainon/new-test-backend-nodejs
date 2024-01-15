@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const connectToDatabase = async () => {
   try {
-    const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/anota-ai";
+    const uri = process.env.MONGODB_URI;
     await mongoose.connect(uri);
     console.log("MongoDB connection stablished");
   } catch (error) {
